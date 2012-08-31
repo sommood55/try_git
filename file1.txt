@@ -1,0 +1,2987 @@
+//5280037
+#include<stdio.h>
+
+main()
+{
+   size_t theSize;
+
+   clrscr();
+
+   theSize = sizeof(char);
+   printf("\n char is %d byte. \n", theSize);
+
+   theSize = sizeof(int);
+   printf("\n int is %d bytes. \n", theSize);
+
+   theSize = sizeof(long int);
+   printf("\n long int is %d bytes. \n", theSize);
+
+   theSize = sizeof(float);
+   printf("\n float is %d bytes. \n", theSize);
+
+   theSize = sizeof(double);
+   printf("\n double is %d bytes. \n", theSize);
+
+   theSize = sizeof(long double);
+   printf("\n long double is %d bytes. \n", theSize);
+
+   return 0;
+
+}
+//5280037
+#include<stdio.h>
+
+main()
+{
+   char c1;
+   char c2;
+   int i;
+
+   clrscr();
+
+   printf("Please type in your 1st character: ");
+   c1 = getc(stdin);
+   while(getchar() != '\n');
+
+   printf("\nPlease type in your 2nd character: ");
+   c2 = getc(stdin);
+
+
+   for(i=0; i<72; i++)
+   {
+      if(i%9 == 0)
+      {
+	 printf("\n");
+      }
+
+      else if(i%2 != 0)
+      {
+	 printf("%c", c1);
+      }
+
+      else if(i%2 == 0)
+      {
+	 printf("%c", c2);
+      }
+   }
+
+   return 0;
+}
+
+//5280037
+#include<stdio.h>									     #include<stdio.h>
+
+main()
+{
+   int width;
+   int height;
+
+   int i;
+   int j;
+
+   clrscr();
+
+   printf("Width: ");
+   scanf("%d", &width);
+
+   printf("\nHeight: ");
+   scanf("%d", &height);
+
+   if(width<=2 || height<=2)
+   {
+      printf("\n\nBoth width and height have to be greater than 2! \n\nPlease try again.");
+   }
+
+   else
+   {
+      for(j=0; j<height; j++)
+      {
+
+
+	 for(i=0; i<width; i++)
+	 {
+	    if(i%width == 0)
+	    {
+	       printf("\n");
+	    }
+
+	    if( (j == 0 && i<width) )
+	    {
+	       printf("O");
+	    }
+
+	    else if(j == height-1 && i<width)
+	    {
+	       printf("O");
+	    }
+
+	    else if(i == 0 && j<height-1)
+	    {
+	       printf("O");
+	    }
+
+	    else if(i == width-1 && j<height-1)
+	    {
+	       printf("O");
+	    }
+
+	    else
+	    {
+	       printf("X");
+	    }
+	 }
+
+
+      }
+   }
+
+
+   return 0;
+}
+//5280037
+#include<stdio.h>
+
+main()
+{
+   int i= 0;
+   unsigned char bitMask;
+
+   clrscr();
+
+   for(i=0; i<8; i++)
+   {
+
+//5280037
+#include<stdio.h>
+
+main()
+{
+   int array[10] = {31, 49, 67, 3, 27, 64, 51, 82, 79, 101};
+   int i;
+   int odd = 0;
+   int even = 0;
+
+   clrscr();
+
+   for(i=0; i<10; i++)
+   {
+      if(array[i]%2 == 0)
+      {
+	 even++;
+      }
+
+      else if(array[i]%2 != 0)
+      {
+	 odd++;
+      }
+   }
+
+   printf("There are %d even numbers in the array. \n", even);
+   printf("\nThere are %d odd numbers in the array.", odd);
+
+   return 0;
+}
+//5380812
+#include <stdio.h>
+main()
+{
+   size_t theSize;
+
+   theSize = sizeof(char);
+   printf("\n char is %d byte", theSize);
+
+   theSize = sizeof(unsigned char);
+   printf("\n unsigned char is %d byte", theSize);
+
+   theSize = sizeof(int);
+   printf("\n int is %d byte", theSize);
+
+   theSize = sizeof(unsigned int);
+   printf("\n unsigned int is %d byte", theSize);
+
+   theSize = sizeof(short int);
+   printf("\n short int is %d byte", theSize);
+
+   theSize = sizeof(unsigned short int);
+   printf("\n unsigned short int is %d byte", theSize);
+
+   theSize = sizeof(long int);
+   printf("\n long int is %d byte", theSize);
+
+   theSize = sizeof(unsigned long int);
+   printf("\n unsigned long int is %d byte", theSize);
+
+   theSize = sizeof(float);
+   printf("\n float is %d byte", theSize);
+
+   theSize = sizeof(double);
+   printf("\n double is %d byte", theSize);
+
+   theSize = sizeof(long double);
+   printf("\n long double is %d byte", theSize);
+
+   return 0;
+}
+
+//5380812
+#include<stdio.h>
+main()
+{
+   int i,j;
+   char a,b;
+   printf("Enter 2 symbols\n");
+   a = getchar();
+   b = getchar();
+   for(i=0; i<8; i++)
+   {
+      printf("\n");
+      for(j=0; j<8; j++)
+      {
+	 if(i%2==0)
+	 {
+	    if(j%2==0)
+	    {
+	       printf("%c", a);
+	    }
+	    else
+	    {
+	       printf("%c", b);
+	    }
+	 }
+	 else
+	 {
+	    if(j%2==0)
+	    {
+	       printf("%c", b);
+	    }
+	    else
+	    {
+	       printf("%c", a);
+	    }
+	}
+      }
+   }
+   return 0;
+}
+//5380812
+#include<stdio.h>
+main()
+{
+   char w1,w2,w3,h1,h2,h3,c;
+   int i,j,h,w;
+   clrscr();
+   printf("Enter number of height and width in format hhh/www (more than 2)\n");
+   h1 = getchar();
+   h2 = getchar();
+   h3 = getchar();
+   c = getchar();
+   w1 = getchar();
+   w2 = getchar();
+   w3 = getchar();
+   h = ((h1-48)*100) + ((h2-48)*10) + (h3-48);
+   w = ((w1-48)*100) + ((w2-48)*10) + (w3-48);
+   for(i=1; i<=h; i++)
+   {
+      printf("\n");
+      for(j=1; j<=w; j++)
+      {
+	 if(i==1)
+	 {
+	    printf("o");
+	 }
+	 else if(j==1)
+	 {
+	    printf("o");
+	 }
+	 else if(j==w)
+	 {
+	    printf("o");
+	 }
+	 else if(i==h)
+	 {
+	    printf("o");
+	 }
+	 else
+	 {
+	    printf("x");
+	 }
+      }
+   }
+   return 0;
+}
+
+//5380812
+#include<stdio.h>
+main()
+{
+   char d1,d2,d3;
+   unsigned char number;
+   unsigned char bitmask = 128;
+   int i;
+   printf("Enter the number from 0 to 255 in 3 digits\n");
+   d1 = getchar();
+   d2 = getchar();
+   d3 = getchar();
+   number = ((d1-48)*100) + ((d2-48)*10) + (d3-48);
+
+   for(i=0; i<4; i++)
+   {
+      if(bitmask & number)
+      {
+	 printf("1");
+      }
+      else
+      {
+	 printf("0");
+      }
+      bitmask = bitmask>>2;
+   }
+   return 0;
+}
+
+//5380812
+#include<stdio.h>
+main()
+{
+   int myArray[10] = {35,73,24,86,2,56,37,23,97,16};
+   int i;
+   int odd = 0;
+   int even =0;
+   for(i=0; i<10; i++)
+   {
+      if(myArray[i]%2==0)
+      {
+	 even++;
+      }
+      else
+      {
+	 odd++;
+      }
+   }
+   printf("For myArray, there are %d even numbers, %d odd numbers", even, odd);
+   return 0;
+}
+
+//5380812
+#include<stdio.h>
+main()
+{
+   char d1,d2,d3,d4,d5,d6,d7;
+   int m1,m2,y1,y2,y3,y4,b_month,b_year,a_month,a_year;
+
+   printf("Enter your birth month/year in format MM/YYYY\n");
+   d1 = getchar();
+   d2 = getchar();
+   d3 = getchar();
+   d4 = getchar();
+   d5 = getchar();
+   d6 = getchar();
+   d7 = getchar();
+   b_month = ((d1-48)*10) + (d2-48);
+   b_year = ((d4-48)*1000) + ((d5-48)*100) + ((d6-48)*10) + (d7-48);
+   if(b_month <= 7)
+   {
+      a_month = 7 - b_month;
+      a_year = 2012 - b_year;
+   }
+   else
+   {
+      a_month = 19 - b_month;
+      a_year = 2011 - b_year;
+   }
+
+   printf("You are: %d years and %d months old\n", a_year, a_month);
+   return 0;
+}
+
+//5380812
+#include <stdio.h>
+main()
+{
+   size_t theSize;
+
+   theSize = sizeof(char);
+   printf("\n char is %d byte", theSize);
+
+   theSize = sizeof(unsigned char);
+   printf("\n unsigned char is %d byte", theSize);
+
+   theSize = sizeof(int);
+   printf("\n int is %d byte", theSize);
+
+   theSize = sizeof(unsigned int);
+   printf("\n unsigned int is %d byte", theSize);
+
+   theSize = sizeof(short int);
+   printf("\n short int is %d byte", theSize);
+
+   theSize = sizeof(unsigned short int);
+   printf("\n unsigned short int is %d byte", theSize);
+
+   theSize = sizeof(long int);
+   printf("\n long int is %d byte", theSize);
+
+   theSize = sizeof(unsigned long int);
+   printf("\n unsigned long int is %d byte", theSize);
+
+   theSize = sizeof(float);
+   printf("\n float is %d byte", theSize);
+
+   theSize = sizeof(double);
+   printf("\n double is %d byte", theSize);
+
+   theSize = sizeof(long double);
+   printf("\n long double is %d byte", theSize);
+
+   return 0;
+}
+
+//5380812
+#include<stdio.h>
+main()
+{
+   int i,j;
+   char a,b;
+   printf("Enter 2 symbols\n");
+   a = getchar();
+   b = getchar();
+   for(i=0; i<8; i++)
+   {
+      printf("\n");
+      for(j=0; j<8; j++)
+      {
+	 if(i%2==0)
+	 {
+	    if(j%2==0)
+	    {
+	       printf("%c", a);
+	    }
+	    else
+	    {
+	       printf("%c", b);
+	    }
+	 }
+	 else
+	 {
+	    if(j%2==0)
+	    {
+	       printf("%c", b);
+	    }
+	    else
+	    {
+	       printf("%c", a);
+	    }
+	}
+      }
+   }
+   return 0;
+}
+//5380812
+#include<stdio.h>
+main()
+{
+   char w1,w2,w3,h1,h2,h3,c;
+   int i,j,h,w;
+   clrscr();
+   printf("Enter number of height and width in format hhh/www (more than 2)\n");
+   h1 = getchar();
+   h2 = getchar();
+   h3 = getchar();
+   c = getchar();
+   w1 = getchar();
+   w2 = getchar();
+   w3 = getchar();
+   h = ((h1-48)*100) + ((h2-48)*10) + (h3-48);
+   w = ((w1-48)*100) + ((w2-48)*10) + (w3-48);
+   for(i=1; i<=h; i++)
+   {
+      printf("\n");
+      for(j=1; j<=w; j++)
+      {
+	 if(i==1)
+	 {
+	    printf("o");
+	 }
+	 else if(j==1)
+	 {
+	    printf("o");
+	 }
+	 else if(j==w)
+	 {
+	    printf("o");
+	 }
+	 else if(i==h)
+	 {
+	    printf("o");
+	 }
+	 else
+	 {
+	    printf("x");
+	 }
+      }
+   }
+   return 0;
+}
+
+//5380812
+#include<stdio.h>
+main()
+{
+   char d1,d2,d3;
+   unsigned char number;
+   unsigned char bitmask = 128;
+   int i;
+   printf("Enter the number from 0 to 255 in 3 digits\n");
+   d1 = getchar();
+   d2 = getchar();
+   d3 = getchar();
+   number = ((d1-48)*100) + ((d2-48)*10) + (d3-48);
+
+   for(i=0; i<4; i++)
+   {
+      if(bitmask & number)
+      {
+	 printf("1");
+      }
+      else
+      {
+	 printf("0");
+      }
+      bitmask = bitmask>>2;
+   }
+   return 0;
+}
+
+//5380812
+#include<stdio.h>
+main()
+{
+   int myArray[10] = {35,73,24,86,2,56,37,23,97,16};
+   int i;
+   int odd = 0;
+   int even =0;
+   for(i=0; i<10; i++)
+   {
+      if(myArray[i]%2==0)
+      {
+	 even++;
+      }
+      else
+      {
+	 odd++;
+      }
+   }
+   printf("For myArray, there are %d even numbers, %d odd numbers", even, odd);
+   return 0;
+}
+
+//5380812
+#include<stdio.h>
+main()
+{
+   char d1,d2,d3,d4,d5,d6,d7;
+   int m1,m2,y1,y2,y3,y4,b_month,b_year,a_month,a_year;
+
+   printf("Enter your birth month/year in format MM/YYYY\n");
+   d1 = getchar();
+   d2 = getchar();
+   d3 = getchar();
+   d4 = getchar();
+   d5 = getchar();
+   d6 = getchar();
+   d7 = getchar();
+   b_month = ((d1-48)*10) + (d2-48);
+   b_year = ((d4-48)*1000) + ((d5-48)*100) + ((d6-48)*10) + (d7-48);
+   if(b_month <= 7)
+   {
+      a_month = 7 - b_month;
+      a_year = 2012 - b_year;
+   }
+   else
+   {
+      a_month = 19 - b_month;
+      a_year = 2011 - b_year;
+   }
+
+   printf("You are: %d years and %d months old\n", a_year, a_month);
+   return 0;
+}
+
+//5380832
+#include <stdio.h>
+main()
+{
+	size_t theSize;
+
+	clrscr();
+
+	theSize = sizeof(char);
+	printf("\nsize of char is %d", theSize);
+
+	theSize = sizeof(long char);
+	printf("\nsize of long char is %d", theSize);
+
+	theSize = sizeof(int);
+	printf("\nsize of int is %d", theSize);
+
+	theSize = sizeof(long int);
+	printf("\nsize of long int is %d", theSize);
+
+	theSize = sizeof(long);
+	printf("\nsize of long is %d", theSize);
+	
+	theSize = sizeof(long long);
+	printf("\nsize of long long is %d", theSize);
+
+	theSize = sizeof(float);
+	printf("\nsize of float is %d", theSize);
+
+	theSize = sizeof(long float);
+	printf("\nsize of long float is %d", theSize);
+
+	theSize = sizeof(double);
+	printf("\nsize of double is %d", theSize);
+
+	theSize = sizeof(long double);
+	printf("\nsize of long double is %d", theSize);
+
+	return 0;
+}
+	
+//5380832
+#include<stdio.h>
+
+int main()
+{
+	int i, j, k;
+	char c1, c2;
+	printf("Enter two characters [Example : 01 or XY]\n");
+	c1 = getchar();
+	c2 = getchar();
+
+	for(i=0; i<4; i++)
+    {
+		for(j=0; j<8; j++)
+	{
+			if(j%2 == 0)
+	    {
+				printf("%c", c1);
+	    }
+			else
+	    {
+				printf("%c", c2);
+	    }
+	}
+	printf("\n");
+	for(k=0; k<8; k++)
+	{
+			if(k%2 == 1)
+	    {
+				printf("%c", c1);
+	    }
+			else {
+				printf("%c", c2);
+	    }
+	}
+	printf("\n");
+    }
+return 0;
+}
+
+
+//5380832
+#include <stdio.h>
+main()
+{
+	int array1[10] = {20, 10, 1, 1, 1, 1, 1, 1, 1, 1};
+	int a, b, c, d, e, f, g, h, i, j;
+	int y = 10;
+	int z = 0;
+	clrscr();
+	printf("%d, %d, %d, %d, %d, %d, %d, %d, %d, %d\n", array1[0],
+	array1[1], array1[2], array1[3], array1[4], array1[5],
+	array1[6], array1[7], array1[8], array1[9]);
+
+	array1[0] = a;
+	array1[1] = b;
+	array1[2] = c;
+	array1[3] = d;
+	array1[4] = e;
+	array1[5] = f;
+	array1[6] = g;
+	array1[7] = h;
+	array1[8] = i;
+	array1[9] = j;
+
+	if(a%3 == 1) z++,y--;
+	if(b%3 == 1) z++,y--;
+	if(c%3 == 1) z++,y--;
+	if(d%3 == 1) z++,y--;
+	if(e%3 == 1) z++,y--;
+	if(f%3 == 1) z++,y--;
+	if(g%3 == 1) z++,y--;
+	if(h%3 == 1) z++,y--;
+	if(i%3 == 1) z++,y--;
+	if(j%3 == 1) z++,y--;
+
+	printf("\nThere are %d odd number.", y);
+	printf("\nThere are %d even number.", z);
+	return 0;
+}
+
+//5480038
+#include <stdio.h>
+main ()
+{
+  int i, j;
+  char c1,c2;
+  clrscr ();
+
+  printf ("Please enter your symbols together:  ");
+  c1 = getchar();
+  c2 = getchar();
+
+
+  for (i=0; i<7; i++){
+    for (j=0; j<7; j++){
+      if (j%2==1){
+	if (i%2==1) printf ("%c", c1);
+	else printf ("%c", c2);
+      }
+      else{
+	if (i%2==0) printf ("%c", c1);
+	else printf ("%c", c2);
+      }
+    }
+  printf ("\n");
+  }
+  return 0;
+}
+//5480038
+#include <stdio.h>
+main ()
+{
+  char c1, c2;
+  int n1, n2;
+  int i, j;
+
+  clrscr ();
+  printf ("Plese enter the numbers of rows and the numbers of colums: ");
+  c1 = getc(stdin);
+  c2 = getc(stdin);
+  n1 = c1-48;
+  n2 = c2-48;
+
+  printf ("n1=%d, n2=%d", n1, n2);
+  printf ("\n");
+  for (i=1; i<=n1; i++){
+    for (j=1; j<=n2; j++){
+      if (i==1 ) printf ("O");
+      if (i==n1) printf ("O");
+      if (i>1 && i!=n1){
+	if (j==1) printf("O");
+	if (j==n2) printf("O");
+	if (j>1 && j!=n2) printf ("X");
+      }
+
+    }
+    printf ("\n");
+  }
+
+
+  return 0;
+}
+//5480038
+#include <stdio.h>
+main ()
+{
+  int i, j;
+  unsigned char c1, test;
+  test = 128;
+
+  clrscr ();
+  printf ("Plese enter one number: ");
+  c1 = getc(stdin);
+  j = c1-48;
+
+  for (i=0; i<4; i++){
+    if (test&j ) printf ("1");
+    else printf ("0");
+    test = test >>2;
+  }
+
+  return 0;
+}
+//5480038
+#include <stdio.h>
+main ()
+{
+  int Arr[10] = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+  int i;
+  int kuu = 0;
+  int kee = 0;
+
+
+  clrscr ();
+  for (i=0; i<10; i++){
+    if (Arr[i]%2==0){
+      kuu = kuu +1;
+    }
+    else{
+      kee = kee +1;
+    }
+  }
+  printf ("There are %d of even numbers.", kuu);
+  printf ("There are %d of odd numbers.", kee);
+
+  return 0;
+}
+//5480038
+#include <stdio.h>
+main ()
+{
+  char m1, m2, y1, y2, y3, y4;
+  int m11, m22, y11, y22, y33, y44;
+  int m, y;
+  clrscr ();
+
+  printf ("Please enter your birth month and your birth year together (ex. 03/1992 = 031992) : ");
+  m1 = getc(stdin);
+  m2 = getc (stdin);
+  y1 = getc(stdin);
+  y2 = getc (stdin);
+  y3 = getc(stdin);
+  y4 = getc (stdin);
+
+  m11=(m1-48)*10;
+  m22=m2-48;
+  y11=(y1-48)*1000;
+  y22=(y2-48)*100;
+  y33=(y3-48)*10;
+  y44=y4-48;
+
+  m=m11+m22;
+  y=y11+y22+y33+y44;
+
+
+  printf("%d/%d", m, y);
+
+  if (m<7){
+    printf ( "You are: %d years and %d moths old.", 2012-y, 7-m);
+  }
+  else{
+    printf ( "\nYou are: %d years and %d moths old.", 2011-y, 19-m);
+  }
+  return 0;
+}
+//5480136
+#include <stdio.h>
+void main()
+{
+  char i=1,j,k,l;
+  printf ("char is %d byte", i);
+  printf ("\nunsigned char is %d byte", i);
+  j = i*2;
+  printf ("\nint is %d bytes", j);
+  printf ("\nunsigned int is %d bytes", j);
+  k = j*2;
+  printf ("\nfloat is %d bytes", k);
+  printf ("\nlong int is %d bytes", k);
+  l = k*2;
+  printf ("\ndouble is %d bytes", l);
+}
+//5480136
+#include <stdio.h>
+void main()
+{
+ char i,j,k,l;
+ clrscr();
+ printf ("Enter two characters : ");
+ i = getchar();
+ j = getchar();
+ for (k=0; k<8; k++){
+  for (l=0; l<8; l++){
+   if (l%2 == 0){
+     printf ("%c", i);
+     }
+   else {
+     printf ("%c", j);
+    }
+  }
+  printf ("\n");
+ }
+}
+
+//5480136
+#include <stdio.h>
+void main()
+{
+ char i,j,k,l;
+ clrscr();
+ printf ("Enter chessboard size\nPlease enter the number more than 2");
+ printf ("\nEnter width and height : ");
+ i = getchar();
+ j = getchar();
+ for (k=0; k<i; k++){
+  for (l=0; l<j; l++){
+    printf ("X");
+    }
+    printf ("O");
+    }
+  printf ("\n");
+}
+//5480136
+#include <stdio.h>
+void main()
+{
+ unsigned char i,j,k,l;
+ clrscr();
+ printf ("Enter the number : ");
+ i = getchar();
+ i -= 48;
+ printf ("All bits is ");
+ for (j=0; j<8; j++){
+  if (i%2 == 1){
+   printf ("1");
+   }
+  else {
+   printf ("0");
+   }
+  }
+}
+
+//5480136
+#include <stdio.h>
+void main()
+{
+  int array[10] = {55,50,60,53,51,66,79,85,10,33};
+  int i,j=0;
+  clrscr();
+  for (j=0; j<10; j++){
+    i = array[j];
+    if (i%2==0) {
+       printf ("the even numbers are %d\n",i);
+       }
+    else {
+       printf ("the odd numbers are %d\n",i);
+       }
+    }
+}
+
+//5480136
+#include <stdio.h>
+void main()
+{
+ char i,j,k,l,m,n,o;
+ int p,q,r,s,t,u,v;
+ clrscr();
+ printf ("Enter your birth (mounth/year): ");
+ i = getchar();
+ j = getchar();
+ k = getchar();
+ l = getchar();
+ m = getchar();
+ n = getchar();
+ o = getchar();
+ i = (i-48)*10;
+ j = (j-48);
+ k -= 47;
+ l = (l-48);
+ p = l*1000;
+ m = (m-48);
+ q = m*100;
+ n = (n-48);
+ r = n*10;
+ o = (o-48);
+ s = o;
+ t = i+j;
+  if (t < 7){
+    t = 7-t;
+  }
+  else {
+     t = ((12-t)+7);
+  }
+ u = (p+q+r+s);
+ v = 2012-u;
+ printf ("Your age is %d years and %d months old", v,t);
+}
+
+//5480136
+#include <stdio.h>
+void main()
+{
+  char i=1,j,k,l;
+  printf ("char is %d byte", i);
+  printf ("\nunsigned char is %d byte", i);
+  j = i*2;
+  printf ("\nint is %d bytes", j);
+  printf ("\nunsigned int is %d bytes", j);
+  k = j*2;
+  printf ("\nfloat is %d bytes", k);
+  printf ("\nlong int is %d bytes", k);
+  l = k*2;
+  printf ("\ndouble is %d bytes", l);
+}
+//5480136
+#include <stdio.h>
+void main()
+{
+ char i,j,k,l;
+ clrscr();
+ printf ("Enter two characters : ");
+ i = getchar();
+ j = getchar();
+ for (k=0; k<8; k++){
+  for (l=0; l<8; l++){
+   if (l%2 == 0){
+     printf ("%c", i);
+     }
+   else {
+     printf ("%c", j);
+    }
+  }
+  printf ("\n");
+ }
+}
+
+//5480136
+#include <stdio.h>
+void main()
+{
+ char i,j,k,l;
+ clrscr();
+ printf ("Enter chessboard size\nPlease enter the number more than 2");
+ printf ("\nEnter width and height : ");
+ i = getchar();
+ j = getchar();
+ for (k=0; k<i; k++){
+  for (l=0; l<j; l++){
+    printf ("X");
+    }
+    printf ("O");
+    }
+  printf ("\n");
+}
+//5480136
+#include <stdio.h>
+void main()
+{
+ unsigned char i,j,k,l;
+ clrscr();
+ printf ("Enter the number : ");
+ i = getchar();
+ i -= 48;
+ printf ("All bits is ");
+ for (j=0; j<8; j++){
+  if (i%2 == 1){
+   printf ("1");
+   }
+  else {
+   printf ("0");
+   }
+  }
+}
+
+//5480136
+#include <stdio.h>
+void main()
+{
+  int array[10] = {55,50,60,53,51,66,79,85,10,33};
+  int i,j=0;
+  clrscr();
+  for (j=0; j<10; j++){
+    i = array[j];
+    if (i%2==0) {
+       printf ("the even numbers are %d\n",i);
+       }
+    else {
+       printf ("the odd numbers are %d\n",i);
+       }
+    }
+}
+
+//5480136
+#include <stdio.h>
+void main()
+{
+ char i,j,k,l,m,n,o;
+ int p,q,r,s,t,u,v;
+ clrscr();
+ printf ("Enter your birth (mounth/year): ");
+ i = getchar();
+ j = getchar();
+ k = getchar();
+ l = getchar();
+ m = getchar();
+ n = getchar();
+ o = getchar();
+ i = (i-48)*10;
+ j = (j-48);
+ k -= 47;
+ l = (l-48);
+ p = l*1000;
+ m = (m-48);
+ q = m*100;
+ n = (n-48);
+ r = n*10;
+ o = (o-48);
+ s = o;
+ t = i+j;
+  if (t < 7){
+    t = 7-t;
+  }
+  else {
+     t = ((12-t)+7);
+  }
+ u = (p+q+r+s);
+ v = 2012-u;
+ printf ("Your age is %d years and %d months old", v,t);
+}
+
+//5480356
+#include <stdio.h>
+main()
+{
+  size_t theSize;
+  clrscr();
+  theSize = sizeof(char);
+  printf("\n size of char is %d", theSize);
+
+  theSize = sizeof(int);
+  printf("\n size of int is %d", theSize);
+
+  theSize = sizeof(float);
+  printf("\n size of float is %d", theSize);
+
+   theSize = sizeof(double);
+  printf("\n size of double is %d", theSize);
+
+
+
+
+  return 0;
+}
+
+//5480356
+#include <stdio.h>
+main()
+{
+  int i,j,i1,i2;
+  clrscr();
+  printf("Please enter the two symbols that you would like to use:");
+
+  i1=getc(stdin);
+  i2=getc(stdin);
+  for(i=0; i<8; i++) {
+    for(j=0; j<8; j++) {
+      if(i%2==1)
+      {
+	if(j%2==1)
+	{
+	  printf("X");
+	  }
+	  else
+	  {
+	   printf("O");
+	   }
+	  }
+	  else
+	  {
+	    if(j%2==0)
+	    {
+	      printf("X");
+	      }
+	      else
+	      {
+	       printf("O");
+	      }
+	    }
+	  }
+	   printf("\n");
+	   }
+  return 0;
+}
+
+//5480356
+#include <stdio.h>
+main()
+{
+ int i1,i2,j;
+ clrscr();
+ printf("Please type in the height and the width with no space in between:");
+ i1=getc(stdin);
+ i2=getc(stdin);
+ for(i1=1; i1<=5; i1++)
+ {
+   for(i2=3; i2<=3; i2++)
+   {
+     if(i1%2==0) printf("O");
+     else printf("O");
+     if(i2%2==0) printf("O");
+     else printf("O");
+     if(i1%2==1) printf("X");
+     }
+     printf("\n");
+     }
+  return 0;
+}
+
+
+
+
+//5480356
+#include <stdio.h>
+main()
+{
+  int i =0,j;
+  printf("Please enter a number:\n");
+  j=getc(stdin>;
+  unsigned char bitMask = j; /* 00000111 */
+  unsigned char testByte= 4; /* 00000100 */
+
+  testByte =~testByte;
+  clrscr();
+  // Loop to print them out
+  for(i=0; i<4; i++)
+  {
+    if(bitMask & testByte) printf("1");
+    else printf("O");
+
+    bitMask = bitMask>>1;
+  }
+ return 0;
+}
+//5480356
+#include <stdio.h>
+main()
+{
+  int myArray[10] = {10, 15, 20, 25, 30, 35, 40, 45, 50, 55};
+  int i =0;
+  clrscr();
+  for(i=0; i<10; i++)
+  {
+   if (i%2==0) printf("even ");
+   else printf("odd ");
+  }
+  return 0;
+}
+
+//5480356
+#include <stdio.h>
+main()
+{
+  int i1,i2,i3,i4,a,b,c,d,e,f,j1,j2,j3,j4,j5;
+  clrscr();
+  printf("Please type in your birth year and birth month as (MM/YYYY):\n");
+  j1=getc(stdin);
+  j2=getc(stdin);
+  j3=getc(stdin);
+  j4=100-(j1+j2);
+  j5=12-j4;
+
+  printf("You are: %d months ",j5);
+  i1=getc(stdin);
+  i2=getc(stdin);
+  i3=getc(stdin);
+  i4=getc(stdin);
+  a=(i1-48)*1000;
+  b=(i2-48)*100;
+  c=(i3-48)*10;
+  d=(i4-48);
+  e=2012-(a+b+c+d);
+
+  printf("and %d years old",e);
+  return 0;
+}
+
+//5480425
+#include <stdio.h>
+#include <conio.h>
+main()
+{
+ clrscr();
+ size_t theSize;
+
+ theSize = sizeof(char);
+ printf("\n size of char is %d", theSize);
+
+ theSize = sizeof(unsigned char);
+ printf("\n size of unsigned char is %d", theSize);
+
+ theSize = sizeof(int);
+ printf("\n size of int is %d", theSize);
+
+ theSize = sizeof(unsigned int);
+ printf("\n size of unsigned int is %d", theSize);
+
+ theSize = sizeof(short int);
+ printf("\n size of short int is %d", theSize);
+
+ theSize = sizeof(unsigned short int);
+ printf("\n size of unsigned short int is %d", theSize);
+
+ theSize = sizeof(long int);
+ printf("\n size of long int is %d", theSize);
+
+ theSize = sizeof(unsigned long int);
+ printf("\n size of unsigned long int is %d", theSize);
+
+ theSize = sizeof(float);
+ printf("\n the size of float is %d", theSize);
+
+ theSize = sizeof(double);
+ printf("\n the size of double is %d", theSize);
+
+ theSize = sizeof(long double);
+ printf("\n the size of long double is %d", theSize);
+
+ return 0;
+}
+//5480425
+#include <stdio.h>
+#include <conio.h>
+
+main()
+{
+ char x, y;
+ int h, w, m;
+
+ m  =  h+w;
+
+ clrscr();
+
+ printf("Please enter the first character you want for the chessboard:\n");
+ scanf("%d"), &x;
+
+ printf("Please enter the second character you want for the chesssboard:\n");
+ scanf("%d", &y);
+
+ for(h=0; h<8; h++);
+ {
+  for(w=0; w<8; w++);
+  {
+   if( m%2 == 0 ) printf("%d", x);
+   else printf("%d", y);
+  }
+ }
+ return 0;
+}
+//5480425
+#include <stdio.h>
+#include <conio.h>
+
+main()
+{
+ int i,j,k,l;
+ clrscr();
+
+ printf("Please enter two numbers (The numbers must be greater than 2):");
+ scanf("%d %d", &i, &j);
+
+  for(k=0; k<i-1; k++)
+  {
+   for(l=0; l<j-1; l++)
+   {
+    if(k==0) printf("O");
+    if(k==i-2) printf("O");
+    if(l==0) printf("O");
+    if(l==j-2) printf("O");
+    else printf("X");
+   }
+   printf("\n");
+  }
+
+ return 0;
+}
+//5480425
+#include <stdio.h>
+#include <conio.h>
+main()
+{
+ int array_int[10] = {11, 0, 4, 6, 31, 30, 7, 23, 3, 36}
+ int o,i;
+ for(array_int[i]%2==0)
+  {printf("This array has %d odd numbers", o)}
+ for(array_int[i]%2!=0)
+  {printf("This array")}
+}
+//5480425
+#include <stdio.h>
+#include <conio.h>
+main()
+{
+ clrscr();
+
+ int m1, m2, y1, y2;
+
+ m2 = 7;
+ y2 = 2012;
+
+ printf("Please input your date of birth in the following format, MM/YYYY:");
+ scanf("%d/%d", &m1, &y1);
+
+ m1 = m2-m1;
+ y1 = y2-y1;
+
+ while(m1<0)
+ {
+  m1 = m1+12;
+  y1 = y1-1;
+
+ }
+ printf("You are %d years and %d months old", y1, m1);
+
+ return 0;
+}
+//5480441
+#include <stdio.h>
+main()
+{
+  int i = 5;
+  int j = 9;
+  int Totalnumbers = i*j;
+  clrscr();
+  printf("The number is %d", Totalnumbers);
+  return 0;
+}
+
+//5480441
+#include <stdio.h>
+main()
+{
+  int i, j, k;
+  clrscr();
+  for (i=0; i<4; i++)
+  {
+   for (j=0; j<8; j++)
+   {
+    if (j %2 == 0)
+     {
+      printf("N");
+     }
+     else
+     {
+      printf("T");
+     }
+    }
+    printf("\n");
+    for (k=0; k<8; k++)
+    {
+     if (k%2 == 1)
+     {
+      printf ("N");
+     }
+     else
+     {
+      printf ("T");
+     }
+    }
+    printf("\n");
+   }
+   return 0;
+}
+
+
+//5480441
+#include <stdio.h>
+main()
+{
+  int i, j, r, w;
+  clrscr();
+  printf ("Enter the number of width");
+  scanf ("%d", &r);
+  printf ("Enter the number of height");
+  scanf ("%d", &w);
+
+  for (i=2; i<=r; i++)
+  {
+   printf("\n");
+   for (j=2; j<=w; j++)
+   {
+    if (i%2 == 1)
+    {
+     if (j%2 == 1)
+     {
+      printf("X");
+     }
+     else
+     {
+      printf("O");
+     }
+    }
+    else
+    {
+     if (j%2 == 1)
+     {
+      printf("O");
+     }
+     else
+     {
+     printf("O");
+     }
+    }
+   }
+  }
+  return 0;
+}
+
+//5480441
+#include <stdio.h>
+main()
+{
+  char d1, d2, d3, d4, d5, d6;
+  int n1, n2, n3, n4, n5, n6, year, age;
+  clrscr();
+  printf("Enter the 4 digits of your birth month/year\n");
+  d1 = getchar();
+  d2 = getchar();
+  d3 = getchar();
+  d4 = getchar();
+  d5 = getchar();
+  d6 = getchar();
+  {
+   printf("\nYour birth year is %c%c%c%c%c%c", d1, d2, d3, d4, d5, d6);
+  }
+  year = ((d3 - 48)*1000) + ((d4-48)*100) + ((d5-48)*10) + (d6-48);
+  age = 2012 - year;
+  printf("\nYour age is %d years", age);
+  return 0;
+}
+
+
+
+//5480683
+#include <stdio.h>
+
+main(){
+	clrscr();
+	printf("int is %d byte(s)\n",sizeof(int));
+	printf("char is %d byte(s)\n",sizeof(char));
+	printf("double is %d byte(s)\n",sizeof(double));
+	printf("float is %d byte(s)\n",sizeof(float));
+	printf("long is %d byte(s)\n",sizeof(long));
+	printf("long int is %d byte(s)\n",sizeof(long int));
+	printf("long double is %d byte(s)\n",sizeof(long double));
+	printf("short is %d byte(s)\n",sizeof(short));
+	printf("size_t is %d byte(s)",sizeof(size_t));
+	return 0;
+}
+//5480683
+#include <stdio.h>
+
+main(){
+   unsigned char ch;
+   unsigned c1,c2;
+   int i=0,j=0;
+   clrscr();
+   for(i=0;i<2;i++){    /* 4 including "Enter" */
+	if(i==0){
+		printf("Put the first character:");
+	}else{
+		printf("Put the second character:");
+	}
+	for(j=0;j<2;j++){
+		ch=getc(stdin);
+		if(i==0 && j==0){
+			c1=ch;
+		}else if(i==1 && j==0){
+			c2=ch;
+		}
+	}
+	printf("\n");
+   }
+   for(i=0;i<8;i++){
+	for(j=0;j<8;j++){
+		if(i%2==0){
+			if(j%2==0){
+				printf("%c",c1);
+			}else{
+				printf("%c",c2);
+			}
+		}else{
+			if(j%2!=0){
+				printf("%c",c1);
+			}else{
+				printf("%c",c2);
+			}
+		}
+	}
+	printf("\n");
+   }
+   return 0;
+}
+//5480683
+#include <stdio.h>
+
+main(){
+	int i,j;
+	int w,h;
+	char rep=0; /* repetition condition only 0 or 1 */
+	clrscr();
+	do{
+		rep=0;
+		printf("Put the dimensions ex. 3x5:");
+		for(i=0;i<4;i++){  /*4 including "Enter"*/
+			j=getc(stdin); /*Try using few variables*/
+			if(i!=1 && i!=3){ /* 3x5 "x" is ignored  */
+				if(j<48 || j>58){  /* non number case  */
+					rep=1;
+				}
+			}
+			if(i==0){
+				w=j-48;
+			}else if(i==2){
+				h=j-48;
+			}
+		}
+		if(rep==1){
+			printf("Wrong Pattern\n");
+		}else if(w<=2 || h<=2){
+			printf("Height and Width must be greater than 2\n");
+		}
+	}while(w<=2 || h<=2 || rep==1);  /* Validation make user put it again */
+	for(i=0;i<h;i++){
+		for(j=0;j<w;j++){
+			if(i==0 || i==h-1){
+				printf("O");
+			}else{
+				if(j==0 || j==w-1){
+					printf("O");
+				}else{
+					printf("X");
+				}
+			}
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+//5480683
+#include <stdio.h>
+
+main(){
+	unsigned char bitMask=128;
+	unsigned ch;
+	char i; /*I will never be more than 8;*/
+	clrscr();
+	printf("Put one number:");
+	for(i=0;i<2;i++){ /*2 including enter*/
+		if(i==0){
+			ch=getc(stdin);
+			ch=ch-48;
+		}
+	}
+	clrscr();
+	for(i=0;i<8;i+=2){
+		if(bitMask&ch){
+			printf("1");
+		}else{
+			printf("0");
+		}
+		bitMask=bitMask>>2;
+	}
+	return 0;
+}
+//5480683
+#include <stdio.h>
+
+main(){
+	int arr[10]={54,19,44,58,79,45,55,41,64,18};
+	int nOdd=0,nEven=0,i=0;
+	clrscr();
+	for(i=0;i<10;i++){
+		if(arr[i]%2==0){
+			nEven++;
+		}else{
+			nOdd++;
+		}
+	}
+	printf("There are %d even numbers in the array\n",nEven);
+	printf("There are %d odd numbers in the array\n",nOdd);
+
+	return 0;
+}
+//5480683
+#include <stdio.h>
+
+main(){
+	unsigned char ch;
+	int i,year=0,month=0;
+	char rep=0; /* repetition condition onely 0 or 1 */
+	clrscr();
+	do{
+		printf("Put your bith year:");
+		year=0;month=0;rep=0;
+		for(i=0;i<8;i++){ /*8 including "Enter"*/
+			ch=getc(stdin);
+			if(i!=2 && i!=7){ /* "/" and "Enter" are ignored */
+				if(ch<48 || ch>58){
+					rep=1;	/* Validation for non number */
+				}
+			}
+			if(i==0){
+				month+=(ch-48)*10;
+			}else if(i==1){
+				month+=(ch-48);
+			}else if(i==3){
+				year+=(ch-48)*1000;
+			}else if(i==4){
+				year+=(ch-48)*100;
+			}else if(i==5){
+				year+=(ch-48)*10;
+			}else if(i==6){
+				year+=(ch-48);
+			}
+		}
+		if(year>2012){
+			printf("You birth year must be less than or equal 2012\n");
+		}else if(rep==1){
+			printf("Wrong Pattern\n");
+		}else if(year==2012 && month>7){
+			printf("If you're born in 2012, month must be less than or equal 7\n");
+			rep=1;
+		}else if(month>12){
+			printf("Month can't be more than 12\n");
+			rep=1;
+		}
+	}while(year>2012 || rep==1); /* validation if wrong pattern, put it again */
+	if(month>7){
+		month=12-(month)+7;
+		year=2012-year;
+		year--;
+	}else{
+		month=7-month;
+		year=2012-year;
+	}
+	printf("You are: %d years and %d months old\n",year,month);
+	return 0;
+}
+//5280719
+#include <stdio.h>
+main(){
+
+  size_t theSize;
+
+  theSize = sizeof(char);
+  printf("char is %d byte\n",theSize);
+
+  theSize = sizeof(unsigned char);
+  printf("unsigned char is %d byte\n",theSize);
+
+  theSize = sizeof(int);
+  printf("int is %d bytes\n",theSize);
+
+  theSize = sizeof(unsigned int);
+  printf("unsigned int is %d bytes\n",theSize);
+
+  theSize = sizeof(short int);
+  printf("short int is %d bytes\n",theSize);
+
+  theSize = sizeof(unsigned short int);
+  printf("unsigned short int is %d bytes\n",theSize);
+
+  theSize = sizeof(long int);
+  printf("long int is %d bytes\n",theSize);
+
+  theSize = sizeof(unsigned long int);
+  printf("unsigned long int is %d bytes\n",theSize);
+
+  theSize = sizeof(float);
+  printf("Character is %d bytes\n",theSize);
+
+  theSize = sizeof(double);
+  printf("double is %d bytes\n",theSize);
+
+  theSize = sizeof(long double);
+  printf("long double is %d bytes\n",theSize);
+  return 0;
+
+}
+//5280719
+# include <stdio.h>
+main(){
+  char ch1, ch2;
+  int i,j;
+  printf("Enter the symbols you would like to use in the chessboard: \n");
+  ch1 = getc(stdin);
+  ch2 = getc(stdin);
+  clrscr();
+  for(i=0; i<8; i++)
+  {
+    for(j=0; j<8; j++)
+    {
+      if(j%2==0){printf("%c",ch1);}
+      else {printf("%c",ch2);}
+    }
+    printf("\n");
+  }
+  return 0;
+}
+//5280719
+# include<stdio.h>
+main(){
+  int r, c, m, n, i, j;
+
+  printf("Enter the number of rows: ");
+  scanf("%d",&r);
+
+  printf("\nEnter the number of columns: ");
+  scanf("%d",&c);
+  m=c-1;
+  n=r-1;
+  for(i=0; i<r; i++)
+  {
+    for(j=0; j<c; j++)
+    {
+      if( (j==0) || (i==0) || (j==m) || (i==n) ){printf("O");}
+      else {printf("X");}
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+
+
+//5280719
+#include <stdio.h>
+main(){
+  int i;
+  unsigned char testbyte;
+  unsigned char bitmask = 128;
+  printf("Enter a number: \n");
+  scanf("%d",&testbyte);
+
+  for(i=0; i<4; i++)
+  {
+    if(bitmask & testbyte) printf("1");
+    else printf("0");
+    bitmask = bitmask>>2;
+  }
+  return 0;
+}
+//5280719
+#include <stdio.h>
+main(){
+
+  int myA[10] = {2, 4, 6, 8, 9, 12, 14, 15, 17, 19 };
+  int i, o, e;
+  o = 0, e = 0;
+  for(i=0; i<10; i++)
+  {
+    if(myA[i]%2==0) {e=e+1;}
+    else {o=o+1;}
+  }
+  clrscr();
+  printf("There are %d even numbers and %d odd numbers",e,o);
+  return 0;
+}
+//5280719
+#include <stdio.h>
+main(){
+  int am, ay,Y, M, m1, m2, y1, y2, y3, y4, d;
+
+  printf("Enter your birth month and year (MM/YYYY): ");
+  m1 = getc(stdin);
+  m2 = getc(stdin);
+  d = getc(stdin);
+  y1 = getc(stdin);
+  y2 = getc(stdin);
+  y3 = getc(stdin);
+  y4 = getc(stdin);
+  M = (48-m1) + (50-m2);
+  Y = (50-y1)*1000 + (48 - y2)*100 + (49 - y3)*10 + (50-y4);
+
+  if( (M-7) > 0 ) {am = M-7;}
+  else if( (M-7) < 0 ) {am = M - 7+12;}
+  else {am = 0;}
+
+  printf("You are: %d years and %d months old",Y,am);
+
+
+  return 0;
+}
+//5280941
+#include<stdio.h>
+void main()
+{
+	int i;
+	char l;
+	float x;
+	double y;
+	long int k;
+	long double m;
+	unsigned char n;
+	unsigned int v;
+	clrscr();
+	printf("The size of each Data types\n");
+	printf("char is %d\n", sizeof(l));
+	printf("int is %d\n", sizeof(i));
+	printf("double is %d\n", sizeof(y));
+	printf("float is %d\n", sizeof(x));
+	printf("long int is %d\n", sizeof(k));
+	printf("long double is %d\n", sizeof(m));
+	printf("unsigned char is %d\n", sizeof(n));
+	printf("unsigned int is %d\n", sizeof(v));
+}
+//5280941
+#include<stdio.h>
+void main()
+{
+	int i,j,k,m,n;
+	clrscr();
+	printf("Enter the first pattern of chessboard (then press Enter): ");
+	i = getchar();
+	k=getchar();
+	printf("Enter the second pattern of chessboard (then press Enter): ");
+	j = getchar();
+	for(m=0;m<8;m++){
+		for(n=0;n<8;n++){
+			if(m%2 == 0){
+				if(n%2 == 0){
+					printf("%c", i);
+				}
+				else{
+					printf("%c", j);
+				}
+			}
+			else{
+				if(n%2 == 0){
+					printf("%c", j);
+				}
+				else{
+					printf("%c", i);
+				}
+			}
+		}
+		printf("\n");
+	}
+}
+//5280941
+#include<stdio.h>
+void main()
+{
+	int x,y,i,j;
+	clrscr();
+	do{
+		printf("Enter width(greater than 2): ");
+		scanf("%d", &x);
+		printf("Enter height(greater than 2): ");
+		scanf("%d", &y);
+	}while(x < 2 && y < 2);
+	for(i=0;i<y;i++){
+		for(j=0;j<x;j++){
+			if(i > 0 && i < y-1 && j > 0 && j < x
+			-1){
+				printf("x");
+			}
+			else{
+				printf("o");
+			}
+		}
+		printf("\n");
+	}
+}
+//5280941
+#include<stdio.h>
+void main()
+{
+	unsigned char x, i, y;
+	clrscr();
+	printf("Enter number here: ");
+	scanf("%d", &x);
+	y = 128;
+	for(i=1;i<=8;i++){
+		if(i%2 != 0){
+			if(x & y){
+				printf("1");
+			}
+			else{
+				printf("0");
+			}
+		}
+		y = y >> 1;
+	}
+}
+//5280941
+#include<stdio.h>
+void main()
+{
+	int i[10] = {1,2,3,4,5,6,7,8,9,10};
+	int j,x,y;
+	clrscr();
+	x=0; y=0;
+	for(j=0;j<10;j++){
+		if(i[j] % 2 == 0){
+			x++;
+		}
+		else{
+			y++;
+		}
+	}
+	printf("Number of even number is: %d\n", x);
+	printf("Number of odd number is: %d\n", y);
+}
+//5280941
+#include<stdio.h>
+void main()
+{
+	int i , j, l, k, m , n, c, a, month, year;
+	clrscr();
+	printf("Enter your birth month/year here: ");
+	i = getchar();
+	j = getchar();
+	l = getchar();
+	k = getchar();
+	m = getchar();
+	n = getchar();
+	c = getchar();
+	a = getchar();
+	i = i - 48; j = j - 48; k = k - 48; m = m - 48; n = n - 48; c = c - 48;
+	month = (i*10) + j;
+	year = 2012 -((k*1000) + (m*100) + (n*10) + c);
+	if(month > 7){
+		month = 12 - month + 7;
+		year = year - 1;
+	}
+	else if(month = 7){
+		month = 0;
+		year = year + 1;
+	}
+	else{
+		month = 7 - month;
+	}
+	 printf("You are: %d years and %d months old", year, month);
+}
+//5380185
+#include <stdio.h>
+main()
+{
+ size_t theSize;
+ theSize = sizeof(char);
+ printf("\n char is %d byte.", theSize);
+
+ theSize = sizeof(int);
+ printf("\n int is %d bytes.", theSize);
+
+ theSize = sizeof(float);
+ printf("\n float is %d bytes.", theSize);
+
+ theSize = sizeof(unsigned char);
+ printf("\n unsigned char is %d byte.", theSize);
+
+ theSize = sizeof(long int);
+ printf("\n long int is %d bytes.", theSize);
+
+ theSize = sizeof(double);
+ printf("\n double is %d bytes.", theSize);
+
+ return 0;
+}
+//5280941
+#include <stdio.h>
+main()
+{
+  int i, j, k, l;
+  clrscr();
+  k = getchar();
+  l = getchar();
+  for(i=1; i<9; i++)
+  {
+   for(j=1; j<9; j++)
+   {
+    if(i%2==1)
+    {
+     if(j%2==1)
+     {
+      printf("%c", k);
+     }
+     else
+     {
+      printf("%c", l);
+     }
+    }
+    else
+    {
+     if(j%2==0)
+     {
+      printf("%c", k);
+     }
+     else
+     {
+      printf("%c", l);
+     }
+    }
+   }
+   printf("\n");
+  }
+  return 0;
+}
+
+//5280941
+#include <stdio.h>
+main()
+{
+ int i, j;
+ clrscr();
+ for(i=0; i<3; i++)
+ {
+  for(j=0; j<3; j++)
+  {
+   if(i%2==0) printf("O");
+   if(i%2==1) printf("X");
+   if((j>1) && (j<3)) printf("X");
+  }
+ printf("\n");
+ }
+ return 0;
+}
+//5280941
+#include <stdio.h>
+main()
+{
+ int i = 0;
+ unsigned bitMask = 128; /* 10000000 */
+ unsigned testByte;
+ clrscr();
+ scanf("%d", testByte);
+ // Loop to print them out
+ for(i=0; i<8; i++)
+ {
+  if(bitMask & testByte) printf("1");
+  else printf("0");
+   if((testByte%2==1)) printf("%d", testByte);
+  bitMask = bitMask>>1;
+ }
+ return 0;
+}
+
+
+
+//5280941
+#include <stdio.h>
+main()
+{
+ int a, b, a1, b1, m, n, o, p, m1, n1, o1, p1, x, y, z, w;
+ clrscr();
+ a = getchar();
+ b = getchar();
+ m = getchar();
+ n = getchar();
+ o = getchar();
+ p = getchar();
+
+ a1 = (a-48)*10;
+ b1 = b-48;
+ z =  a1+b1;
+
+ m1 = (m-48)*1000;
+ n1 = (n-48)*100;
+ o1 = (o-48)*10;
+ p1 = p-48;
+ x = m1+n1+o1+p1;
+ y = 2012-x;
+   printf("You are: %d years", y);
+   printf(" and %d months old.", z);
+ return 0;
+}
+//5380357
+#include<stdio.h>
+main()
+{ int a,b;
+
+  int i;
+
+
+  char c;
+  float f;
+  double df;
+
+  int *ptri;
+  char *ptrc;
+  float *ptrf;
+
+  ptri=&i;
+  printf("a adress %p\n pointer i %p\n",&i,ptri);
+    a=*ptri;
+    printf("ptri ")
+    (*ptri)++;
+    b=*ptri;
+    printf("int is %p byte.\n",b-a);
+  ptrc=&c;
+
+    ++*ptrc;
+    b=*ptrc;
+//    printf("char is %d byte.\n",b-&c);
+  ptrf=&f;
+  //  a=&f;
+    ++*ptrf;
+    b=*ptrf;
+  //  printf("float is %d byte.\n",b-a);
+
+ // printf("int is %d byte",);
+
+
+}
+//5380357
+#include<stdio.h>
+main()
+{
+  int i,j;
+  char x,o;
+  printf("Now you can choose 2 characters as the symbol on the chessboard.\n");
+  printf("Please choose a character as the first symbol:");
+  x=getchar();
+  printf("Please choose a character as the second symbol:");
+  o=getchar();
+  printf("The symbols you chose just now are \"%c\" and \"%c\"\n", &x,&o);
+
+  for(i=0;i<8;i++)
+  {
+    for(j=0;j<8;j++)
+    {
+      if((i%2==0&&j%2==0)||(i%2==1&&j%2==1))
+	 printf("%c",x);
+      else
+	 printf("%c",o);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+//5380357
+#include<stdio.h>
+main()
+{
+   int i,j,w,h;
+   printf("Please enter 2 numbers for the width and height:\n");
+   printf("(NOTE:EACH NUMBER MUST BE GREATER THAN 2)\n");
+   scanf("%d %d",&w,&h);
+
+   for(i=0;i<h;i++)
+   {
+      for(j=0;j<w;j++)
+      {
+	 if((i==0||i==h-1)||(j==0||j==w-1))
+	    printf("O");
+	 else
+	    printf("X");
+      }
+      printf("\n");
+   }
+   return 0;
+}
+//5380357
+#include<stdio.h>
+main()
+{
+  unsigned char c;
+  int i,m,a;
+  c=getc(stdin);
+  m=128;
+  for(i=0;i<4;i++)
+  {
+
+     if(c&m)
+       printf("1 ");
+     else
+       printf("0 ");
+     m=m>>2;
+  }
+  printf("\n");
+
+  return 0;
+}
+//5380357
+#include<stdio.h>
+main()
+{
+  int i,n=0;
+  int a[9]={14,47,1,3,4,6,8,5,3};
+  printf("Now we have an array with the following elements:\n");
+
+  for(i=0;i<10;i++)
+  {   printf("%d ",a[i]);
+
+      if(a[i]%2!=0)
+      n=++n;
+  }
+  printf("\nIn the array above there are %d odd numbers.\n",n);
+
+
+  return 0;
+}
+//5380357
+#include<stdio.h>
+main()
+{
+  int yb,mb,yo,mo;
+  printf("Please enter the month and the year that you were born in numbers with the following format:\n");
+  printf("MM/YYYY\n");
+
+  scanf("%d/%d",&mb,&yb);
+
+  yo=2011-yb;
+  if(mb<7)
+    {
+      yo=yo+1;
+      mo=7-mb;
+      printf("You are: %d years and %d months old.",yo,mo);
+    }
+  else if(mb>7)
+    {
+      mo=12-(mb-7);
+      printf("You are: %d years and %d months old.",yo,mo);
+    }
+  else
+  {
+    yo=++yo;
+    printf("You are: exactly %d years old",yo,mo);
+  }
+  return 0;
+}
+//5380536
+#include <stdio.h>
+main()
+{
+  int i = 8;
+  int j = 16;
+  int k = 32;
+  int l = 32;
+  int m = 64;
+  int n = 80;
+  int z = 8;
+
+  int Char = i/z;
+  int Int  = j/z;
+  int Long = k/z;
+  int Float = l/z;
+  int Double = m/z;
+  int Longdouble = n/z;
+  clrscr();
+
+  printf("Char is %d bytes", Char);
+  printf("\nInt is %d bytes", Int);
+  printf("\nLong int is %d bytes", Long);
+  printf("\nFloat is %d bytes", Float);
+  printf("\nDouble is %d bytes", Double);
+  printf("\nLong double is %d bytes", Longdouble);
+
+  return 0;
+}
+
+
+
+//5380536
+#include <stdio.h>
+main()
+{
+ char  i= 1, j,k,l;
+ printf ("char is %d byte", i);
+ printf ("unsigned char is %d byte", i);
+
+ j = i*2
+//5380536
+#include <stdio.h>
+main()
+{
+	int myArray[10] = {15 , 17 ,32 , 36 , 46 ,46 , 93, 78, 95 ,100}
+	int i,j =0
+
+	if (myArray[10] % 2==0)
+
+	printf("Integers that is odd number");
+	printf(" %d\n", myArray[5];
+ return 0;
+}
+//5380600
+#include <stdio.h>
+main()
+{
+ size_t theSize;
+ theSize = sizeof(char);
+ printf("\n the size of the data type is %d", theSize);
+ theSize = sizeof(unsigned char);
+ printf("\n the size of the data type is %d", theSize);
+ theSize = sizeof(int);
+ printf("\n the size of the data type is %d", theSize);
+ theSize = sizeof(unsigned int);
+ printf("\n the size of the data type is %d", theSize);
+ theSize = sizeof(long int);
+ printf("\n the size of the data type is %d", theSize);
+ theSize = sizeof(float);
+ printf("\n the size of the data type is %d", theSize);
+ theSize = sizeof(double);
+ printf("\n the size of the data type is %d", theSize);
+ theSize = sizeof(long double);
+ printf("\n the size of the data type is %d", theSize);
+
+ return 0;
+}
+//5380600
+#include <stdio.h>
+main()
+{
+ int a,b,c,d;
+ clrscr();
+ a=getc(stdin);
+
+ b=getc(stdin);
+
+ for(c=0;c<8;c++)
+ {
+  for(d=0;d<8;d++)
+  {
+   if (c%2==0)
+   {
+    if (d%2==0)
+    {
+     printf("%c", a);
+    }
+    else
+    {
+     printf("%c", b);
+    }
+   }
+   else
+   {
+    if (d%2==0)
+    {
+     printf("%c", b);
+    }
+    else
+    {
+     printf("%c", a);
+    }
+   }
+  }
+  printf ("\n");
+ }
+ return 0;
+}
+//5380600
+#include <stdio.h>
+main()
+{
+ int a,b,c,d;
+ clrscr();
+ scanf ("%d",&c);
+ scanf ("%d",&d);
+ for (a=0;a<c;a++)
+ {
+  for (b=1;b<d;b++)
+  {
+   if (a==0|| a==c)&&( b==0||b==d)
+   {
+    printf ("o");
+   }
+   else
+   {
+    printf ("x");
+   }
+  }
+ }
+ printf ("\n");
+ }
+ return 0;
+}
+//5380600
+//5380600
+#include <stdio.h>
+main()
+{
+ int myArray[10] = {10,20,30,40,50,11,13,15,17,19};
+ int b,c,a=0;
+ clrscr();
+ for(a=0;a<10;a++)
+ {
+  if ( myArray[a]%2==0)
+  {
+   printf ("\nThis is the Even number of the array: %d", myArray[a]);
+  }
+  else
+  {
+   printf ("\nThis is the Ood number of the array: %d", myArray[a]);
+  } }
+ printf("\n");
+ return 0;
+}
+//5380600
+#include <stdio.h>
+main()
+{
+ int a,b,c,d,e,f,g,x,y,z;
+ clrscr();
+ a=getc(stdin);
+ b=getc(stdin);
+ c=getc(stdin);
+ d=getc(stdin);
+ e=getc(stdin);
+ f=getc(stdin);
+ g=getc(stdin);
+
+
+ a=a-48;
+ b=b-48;
+ d=d-48;
+ e=e-48;
+ f=f-48;
+ g=g-48;
+
+
+ x= 12-((a*10)+(b*1));
+ y= 2012-((d*1000)+(e*100)+(f*10)+(g));
+  printf("You are now:%d years and %d months",y,x);
+  return 0;
+ }
+//5380645
+#include<stdio.h>
+main()
+{
+  size_t the size;
+
+  theSize=sizeof(char);
+  printf("\n size of char is %d",theSize);
+
+  theSize=sizeof(int);
+  printf("\n size of int is %d",theSize);
+
+  theSize=sizeof(float);
+  printf("\n size of float is %d",theSize);
+
+  theSize=sizeof(double);
+  printf("\n size of double is %d",theSize);
+
+  theSize=sizeof(int);
+  printf("\n size of integer is %d",theSize);
+
+  
+  return 0;
+
+}
+//5380645
+#include<stdio.h>
+main()
+{
+   int i,j;
+   char ch1,ch2;
+   printf("\n please enter two characters:");
+   ch1=getc(stdin);
+   ch2=getchar();
+
+
+   for(i=0;i<8;i++)
+   {
+    for(j=0;j<8;j++)
+    {
+       if(i%2==0)
+       {
+       if(j%2==0){
+
+
+	  printf("%c",ch1);
+       }
+       else
+       {
+       printf("%c",ch2);
+       }
+       }
+    else
+       {
+      if(j%2==0)
+      {
+	printf("%c",ch2);
+      }
+      else
+      {
+       printf("%c",ch1);
+      }
+    }
+
+   }
+   printf("\n");
+   }
+
+   return 0;
+
+}
+//5380645
+#include<stdio.h>
+main()
+{
+int i,j;
+ int a,b;
+
+  printf("please enter two digits:");
+    getc(stdin);
+    getchar();
+	printf("your two integers are %c%c",a,b);
+	
+
+    
+    for(i=3;i<6;i++)
+    {
+     for(j=3;j<8;j++)
+     {
+     if(j%(a-48)==0)
+     {
+		if(i%(b-48)==0||i%(b-48)==1)
+		  { printf("X");
+           }
+	 else
+	 {
+	   printf("O");
+	 }
+   }
+  }
+	 else
+	 {
+		 printf("\n");
+}
+  return 0;
+}
+//5380645
+#include<stdio.h>
+main()
+{
+ unsigned char i;
+ printf("please enter a character:");
+ getc(stdin);
+ printf("you enter:%d",i);
+ unsigned char bitmask=128;
+ unsigned char tesByte=i;
+ tesByte=>>2;
+
+ for(i=0;i<8;i++)
+ {
+   if(bitmask&testbye)printf("1");
+   else printf("0");
+ }
+     return 0;
+}
+//5380645
+#include<stdio.h>
+main()
+{
+ int myarray[10]={1,22,32,44,54,2,4,55,66,7};
+ int *i,ptr;
+
+ ptr=&i;
+
+ scanf(i=0;i<10;i++);
+   {
+
+   if(i%2==0)
+   {
+     printf("\n even:%d",myarray[i]);
+   }
+   if(i%2==1)
+   {
+    printf("\n odd:%d",myarray[i]);
+
+   }
+ }
+ return 0;
+}
+//5380645
+ #include<stdio.h>
+ main(){
+ int a,b,c,d,e,f;
+ int year,age,month,birthdate;
+
+ printf("Please enter four digits:\n");
+ a=getc(stdin);
+ b=getchar();
+ c=getchar();
+ d=getchar();
+ printf("your four digits are: %c%c%c%c\n",a,b,c,d);
+ year=((a-48)*1000)+((b-48)*100)+((c-48)*10)+(d-48);
+ age=2012-year;
+  printf("please enter two digits:\n");
+ e=getc(stdin);
+ f=getchar();
+  printf("your birthday is %c%c\n",e,f);
+ month=((e-48)*10+(f-48));
+ birthdate=12-month;
+
+
+ printf("your birthdate and age is :%c/%c\n",birthdate,age);
+
+
+ return 0;
+ }
+
+//5380731
+#include <stdio.h>
+main ()
+{
+	size_t i;
+	clrscr ();
+
+	i = sizeof(char);
+	printf("char is %d byte\n\n", i);
+
+	i = sizeof(unsigned char);
+	printf("unsigned char is %d byte\n\n", i);
+
+	i = sizeof(int);
+	printf("int is %d byte\n\n", i);
+
+	i = sizeof(unsigned int);
+	printf("unsign int is %d byte\n\n", i);
+
+	i = sizeof(signed short int);
+	printf("short int is %d byte\n\n", i);
+
+	i = sizeof(unsigned short int);
+	printf("unsigned short int is %d byte\n\n", i);
+
+	i = sizeof(long int);
+	printf("long int is %d byte\n\n", i);
+
+	i = sizeof(unsigned long int);
+	printf("unsigned long int is %d byte\n\n", i);
+
+	i = sizeof(float);
+	printf("float is %d byte\n\n", i);
+
+	i = sizeof(double);
+	printf("double is %d byte\n\n", i);
+
+
+	i = sizeof(long double);
+	printf("long double is %d byte\n\n", i);
+
+	getch ();
+	return 0;
+
+}
+//5380731
+#include <stdio.h>
+main ()
+{
+	int i, j, a,b,c,d;
+	clrscr ();
+
+	printf("Please, enter one symbol at a time\n");
+	a = getchar ();
+	c = getchar ();
+	printf("Please, enter one symbol for second time\n");
+	b = getchar ();
+	d=getchar ();
+
+	for(i=0; i<8; i++)
+	{
+		for(j=0; j<8; j++)
+		{
+			if(i%2 == 0)
+			{
+
+				if(j%2 == 0)
+				{
+					printf("%c", a);
+				}
+				else
+				{
+					printf("%c", b);
+				}
+			}
+			else
+			{
+			      if(j%2 == 1)
+				{
+					printf("%c", a);
+				}
+				else
+				{
+					printf("%c", b);
+				}
+			}
+		}
+		printf ("\n");
+	}
+	getch ();
+	return 0;
+}
+//5380731
+#include <stdio.h>
+main ()
+{
+    int i, j;
+    int a,b,c, q, w,e;
+    clrscr ();
+
+    printf("Please, enter 2 digits of number (width & height)\n");
+    a = getchar ();
+    b = getchar ();
+    c = getchar ();
+
+    q = a-48;
+    w = b-48;
+
+    for(i=0; i<w; i++)
+    {
+	for(j=0; j<q; j++)
+	{
+		if(j>0 && j!=q-1 && i>0 && i !=w-1)
+		{
+			 printf("X");
+		}
+		else
+		{
+			printf("O");
+		}
+	}
+	printf("\n");
+    }
+    getch ();
+    return 0;
+
+}
+//5380731
+#include <stdio.h>
+main ()
+{
+	int i, a, b, q;
+	unsigned char bitMask = 128;
+	clrscr ();
+
+	printf("Please, enter 1 digits number\n");
+
+	a = getchar ();
+	b = getchar ();
+
+	q = a-48;
+
+	for(i=0; i<4; i++)
+	{
+			if(bitMask & q)
+			{
+				printf("1");
+			}
+			else
+			{
+				printf("0");
+			}
+		if(i == 0 )
+		{
+		bitMask = bitMask >>1;
+		}
+		bitMask = bitMask >>2;
+
+
+       }
+
+	getch ();
+	return 0;
+}
+//5380731
+#include <stdio.h>
+main ()
+{
+	int i, j, a, b, c;
+	int Array[10] = {12,19,20,59,68,73,5,2,9,92};
+	clrscr();
+
+	for(i=0; i<10; i++)
+	{
+		if(Array[i]%2 == 0)
+		{
+			Array[i] = 1;
+			a = Array[i];
+
+		}
+			if(Array[i] == 1)
+		{
+			a = Array[i]+Array[i]+ Array[i]+Array[i]+Array[i];
+		}
+	}
+	printf("%d ", a);
+	for(j=0; j<10; j++)
+	{
+	       if(Array[j]%2 == 1)
+		{
+			Array[j] = 1;
+			b = Array[j];
+			b = Array[j]+Array[j]+ Array[j]+Array[j]+Array[j];
+		}
+	}
+	printf("\n%d ", b);
+
+	getch ();
+	return 0;
+}
+//5380731
+#include <stdio.h>
+main ()
+{
+	int a, b, c, d,a1,b1,d1,e1,f1,g1,h1;
+	int e,f,g,h,j,i, month, year;
+	clrscr();
+
+	printf("Enter your birth month and year (MM/YYYY)\n"),
+
+	a = getchar();   // month
+	b = getchar (); // month
+	c = getchar ();   // /
+	d = getchar ();   // y
+	e = getchar ();   // y
+	f = getchar ();   // y
+	g = getchar ();   // y
+	h = getchar ();   // enter
+
+	a1 = (a-48)*10;
+	b1 = b-48;
+	i = a1 + b1;
+
+	d1 = (d-48)*1000;
+	e1 = (e-48)*100;
+	f1 = (f-48)*10;
+	g1 = (g-48);
+	j = d1+e1+f1+g1;
+
+	if(i < 7 && i >0)
+	{
+		month = (7-i);
+	}
+	else if( i == 8)
+	{
+		month = 11;
+	}
+	else if( i == 9)
+	{
+		month = 10;
+	}
+	else if( i == 10)
+	{
+		month = 9;
+	}
+	else if( i == 11)
+	{
+		month = 8;
+	}
+	else if( i == 12)
+	{
+		month = 7;
+	}
+	else
+	{
+		printf("INVALID");
+	}
+
+	if(i <= 7)
+	{
+	year = 2012-j;
+	}
+	else if(i>7)
+	{
+	year = 2011-j;
+	}
+
+	printf("You are %d years and %d months old", year, month);
+
+	getch ();
+	return 0;
+
+}
